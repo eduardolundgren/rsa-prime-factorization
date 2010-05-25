@@ -1,0 +1,31 @@
+<script type="text/javascript" charset="utf-8">
+
+	var message = "Testando mensagem";
+	var nMessage = [1];
+
+	for (var i = 0; i < message.length; i++) {
+	    var charCode = message[i].charCodeAt();
+
+	    if ([charCode].join('').length <= 2) {
+	        charCode = [0, charCode].join('');
+	    }
+
+	    nMessage.push(charCode);
+	}
+
+	var m = nMessage.join('');
+
+	console.log(m);
+
+	var decMessage = [];
+
+	m = m.slice(1);
+
+	for (var i = 0; i < m.length; i += 3) {
+	    var charCode = parseInt(m.substr(i, 3), 10);
+	    decMessage.push(String.fromCharCode(charCode));
+	}
+
+	console.log(decMessage.join(''));
+
+</script>
